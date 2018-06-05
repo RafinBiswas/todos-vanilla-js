@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <title>ToDo List in Vanilla Js</title>
+  </head>
+  <body>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <h1 class="display-4">ToDo List in Vanilla Js</h1>
+          
+          <div class="form-row">
+            <div class="form-group col-lg-3 offset-lg-4 col-md-5 offset-md-3 col-sm-10 ">
+              <input type="text" class="form-control" id="taskInfo" placeholder="Task" autofocus="">
+            </div>
+            <div class="form-group col-lg-1 col-md-1 col-sm-2">
+              <button type="submit" class="btn btn-primary mb-2" id="addButton">Add</button>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div id="filter" class="form-group col-lg-4 offset-lg-4">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="option" id="all" value="all" checked="">
+                <label class="form-check-label" for="all">All</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="option" id="active" value="active">
+                <label class="form-check-label" for="active">Active</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="option" id="completed" value="completed">
+                <label class="form-check-label" for="completed">Completed</label>
+              </div>
+            </div>
+          </div>
+
+          <div id="errorMsg" class="alert alert-warning alert-dismissible fade" role="alert">
+            <b>Message</b>
+          </div>
+          
+          <table class="table table-bordered text-center">
+            <thead>
+              <tr>
+                <th scope="">
+                  <button id="orderByDescID" class="btn btn-sm btn-default float-left"><i class="far fa-arrow-alt-circle-up"></i></button>
+                  ID
+                  <button id="orderByAscID" class="btn btn-sm btn-default float-right"><i class="far fa-arrow-alt-circle-down"></i></button>
+                </th>
+                <th scope="">
+                  <button id="orderByDescTask" class="btn btn-sm btn-default float-left"><i class="fas fa-sort-alpha-up"></i></button>
+                  Task
+                  <button id="orderByAscTask" class="btn btn-sm btn-default float-right"><i class="fas fa-sort-alpha-down"></i></button>
+                </th>
+                <th scope="">Action</th>
+              </tr>
+            </thead>
+            <tbody id="populateTableRow">
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="app.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
+  </body>
+</html>
